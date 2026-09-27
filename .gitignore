@@ -6,5 +6,3 @@ venv/
 *.egg-info/
 build/
 dist/
-data/*.csv
-!data/.gitkeep
