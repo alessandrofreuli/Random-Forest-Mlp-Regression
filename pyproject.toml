@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "random-forest-mlp-regression"
+version = "0.1.0"
+description = "Predicting the Skill Retention Score with Random Forest and MLP"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "scikit-learn",
+    "torch",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
