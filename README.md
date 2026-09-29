@@ -6,11 +6,11 @@ The dataset is synthetic: 50,000 students described by major, year, GPA, weekly 
 
 ## Features
 
-- **Fair comparison** – same train/test split and preprocessing for both models.
-- **Random Forest** tuned with `GridSearchCV` (3-fold CV, negative RMSE).
-- **PyTorch MLP** trained on a standardised target, rescaled back at prediction time.
-- **Leak-aware** – `Post_Semester_GPA` and `Student_ID` are dropped.
-- **Single config file** – paths, split, grid and MLP hyperparameters in `config.py`.
+- **Fair comparison**: same train/test split and preprocessing for both models.
+- **Random Forest**: tuned with `GridSearchCV` (3-fold CV, negative RMSE).
+- **PyTorch MLP**: trained on a standardised target, rescaled back at prediction time.
+- **Leak-aware**: `Post_Semester_GPA` and `Student_ID` are dropped.
+- **Single config file**: paths, split, grid and MLP hyperparameters in `config.py`.
 
 ## How it works
 
@@ -19,9 +19,9 @@ The dataset is synthetic: 50,000 students described by major, year, GPA, weekly 
 3. **Preprocess** (fit on train only):
    - numeric/boolean: median imputation → `StandardScaler`
    - categorical: most-frequent imputation → `OneHotEncoder`
-4. **Random Forest** – grid over `n_estimators ∈ {100, 200}` and `max_features ∈ {4, 6, 8, 10}`.
-5. **MLP** – `Linear(in, 50) → ReLU → Linear(50, 40) → ReLU → Linear(40, 1)`, MSE loss, SGD (lr 0.01, batch 128, 25 epochs).
-6. **Evaluate** – RMSE, relative error, scatter plots and the top-5 worst predictions per model.
+4. **Random Forest**: grid over `n_estimators ∈ {100, 200}` and `max_features ∈ {4, 6, 8, 10}`.
+5. **MLP**: `Linear(in, 50) → ReLU → Linear(50, 40) → ReLU → Linear(40, 1)`, MSE loss, SGD (lr 0.01, batch 128, 25 epochs).
+6. **Evaluate**: RMSE, relative error, scatter plots and the top-5 worst predictions per model.
 
 ## Results
 
