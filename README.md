@@ -2,7 +2,7 @@
 
 Predicts students' **Skill Retention Score** after a semester of generative-AI use, comparing a tuned **Random Forest** (scikit-learn) with a feed-forward **MLP** (PyTorch) on the same data and preprocessing.
 
-The dataset is synthetic: 50,000 students described by major, year, GPA, weekly GenAI hours, prompt-engineering skill, institutional AI policy, exam anxiety and more.
+The dataset is synthetic: 50,000 students described by major, year, GPA, weekly GenAI hours, prompt-engineering skill, institutional AI policy, exam anxiety and more: https://www.kaggle.com/datasets/laveshjadon/ai-impact-on-students
 
 ## Features
 
